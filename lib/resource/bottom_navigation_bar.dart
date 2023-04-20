@@ -9,28 +9,37 @@ class CustomButtonNavigationBar extends StatelessWidget{
           width: MediaQuery.of(context).size.width * 0.55,
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.all(Radius.circular(20)),
-        color: Colors.green,
+        color: Color.fromRGBO(39, 40, 41, 0.4)
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
             child: IconBottomBar(
-              text: "text", 
+              text: "New Event", 
               iconData: Icons.add, 
-              isSelected: true, 
+              isSelected: false, 
               onPressed: (){}),
           ),
           Expanded(
             child: IconBottomBar(
-              text: "text", 
-              iconData: Icons.search, 
-              isSelected: true, 
+              text: "Moth", 
+              iconData:  Icons.calendar_today, 
+              isSelected: false, 
+              onPressed: (){
+                
+              }),
+          ),
+          Expanded(
+            child: IconBottomBar(
+              text: "Week", 
+              iconData: Icons.calendar_today, 
+              isSelected: false, 
               onPressed: (){}),
           ),
           Expanded(
             child: IconBottomBar(
-              text: "text", 
+              text: "Day", 
               iconData: Icons.calendar_today, 
               isSelected: true, 
               onPressed: (){}),
@@ -64,13 +73,13 @@ class IconBottomBar extends StatelessWidget{
         icon: Icon(
           iconData,
           size: 20,
-          color: isSelected ? Colors.black :Colors.white,
+          color: isSelected ?Colors.white :const Color.fromRGBO(113, 45, 182, 0.842),
         )),
       Text(text,style: TextStyle(
         fontSize: 12,
         height: .1,
-        color: isSelected ? Colors.black :Colors.white,
-      ),)
+        color: isSelected ? Colors.white :const Color.fromRGBO(113, 45, 182, 0.842),
+        )),
 
     ],
    );

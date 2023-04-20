@@ -11,8 +11,8 @@ class Task extends StatelessWidget {
       color: Colors.grey,
       child: Center(
         child: Column(
-          children: [
-            Text("KILLME")
+          children:const [
+             Text("Test")
           ],
         ),
       ),
